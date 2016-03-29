@@ -1,7 +1,7 @@
 {
-  "name": "haoma-hubot-openshift",
+  "name": "rxremedi",
   "version": "1.0.0",
-  "description": "Firebase Hubot on OpenShift",
+  "description": "Twitter Hubot on OpenShift and Firebase",
   "keywords": [
     "Hubot",
     "OpenShift",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/RemediIO/HaomaHubotOpenshift"
+    "url": "https://github.com/RemediIO/RxRemedi"
   },
   "engines": {
     "node": ">= 0.8.x",
@@ -24,7 +24,9 @@
     "hubot-twitter": "^2.1.1"
   },
   "scripts": {
-    "start": "PORT=$OPENSHIFT_NODEJS_PORT BIND_ADDRESS=$OPENSHIFT_NODEJS_IP HEROKU_URL=$OPENSHIFT_APP_DNS FIREBASE_URL=$HUBOT_FIREBASE_APP_URL FIREBASE_SECRET=$HUBOT_FIREBASE_SECRET bin/hubot -n RxRemedi --adapter twitter",
+    "start": "PORT=$OPENSHIFT_NODEJS_PORT BIND_ADDRESS=$OPENSHIFT_NODEJS_IP HEROKU_URL=$OPENSHIFT_APP_DNS FIREBASE_URL=$HUBOT_FIREBASE_APP_URL FIREBASE_SECRET=$HUBOT_FIREBASE_SECRET bin/hubot -n RxRemedi --adapter shell",
+
+    "start2": "PORT=$OPENSHIFT_NODEJS_PORT BIND_ADDRESS=$OPENSHIFT_NODEJS_IP HEROKU_URL=$OPENSHIFT_APP_DNS FIREBASE_URL=$HUBOT_FIREBASE_APP_URL FIREBASE_SECRET=$HUBOT_FIREBASE_SECRET bin/hubot -n RxRemedi --adapter twitter",
     "local": "FIREBASE_URL=$HUBOT_FIREBASE_APP_URL FIREBASE_SECRET=$HUBOT_FIREBASE_SECRET bin/hubot -n RxRemedi --adapter shell"
   }
 }
