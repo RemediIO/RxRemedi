@@ -20,10 +20,11 @@
   "dependencies": {
     "hubot": ">= 2.6.0 < 3.0.0",
     "hubot-firebase-brain": "^1.0.1",
-    "hubot-scripts": ">= 2.5.0 < 3.0.0"
+    "hubot-scripts": ">= 2.5.0 < 3.0.0",
+    "hubot-twitter": "^2.1.1"
   },
   "scripts": {
-    "start": "PORT=$OPENSHIFT_NODEJS_PORT BIND_ADDRESS=$OPENSHIFT_NODEJS_IP HEROKU_URL=$OPENSHIFT_APP_DNS FIREBASE_URL=$HUBOT_FIREBASE_APP_URL FIREBASE_SECRET=$HUBOT_FIREBASE_SECRET bin/hubot -n Hubot -a shell",
+    "start": "PORT=$OPENSHIFT_NODEJS_PORT BIND_ADDRESS=$OPENSHIFT_NODEJS_IP HEROKU_URL=$OPENSHIFT_APP_DNS FIREBASE_URL=$HUBOT_FIREBASE_APP_URL FIREBASE_SECRET=$HUBOT_FIREBASE_SECRET bin/hubot -n --name RxRemedi --adapter twitter",
     "local": "FIREBASE_URL=$HUBOT_FIREBASE_APP_URL FIREBASE_SECRET=$HUBOT_FIREBASE_SECRET bin/hubot -n Haoma -a shell"
   }
 }
