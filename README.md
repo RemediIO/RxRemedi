@@ -2,16 +2,17 @@
 
 #### Twitter Hubot on Openshift and Firebase
 
+[@RxRemedi](https://twitter.com/RxRemedi)
+
 Examples:
 
 ```
-@Haoma image me invader zim gir
-@Haoma youtube nyan cat remix
+@RxRemedi pug me
 ```
 
 ## Getting Started From Scratch
 
-Clone Find Replace "Haoma" with "MyCoolAppName"...
+Clone Find Replace "RxRemedi" with "MyCoolAppName"...
 
 ### OpenShift RHC Setup
 
