@@ -18,6 +18,7 @@
     "npm": ">= 1.1.x"
   },
   "dependencies": {
+    "datauri": "^1.0.4",
     "hubot": ">= 2.6.0 < 3.0.0",
     "hubot-firebase-brain": "^1.0.1",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
