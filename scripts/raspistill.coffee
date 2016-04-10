@@ -10,13 +10,12 @@ module.exports = (robot) ->
     timestamp = moment().unix()
     child = spawn('/bin/sh', ['-c', "raspistill --nopreview --output #{__dirname.replace('scripts', 'static/images/stills')}/#{timestamp}.jpg"])
 
-    child.stdout.on 'data', (data) ->
-
-      res.end "#{JSON.stringify(data)}"
-
+    setTimeout ->
+      res.end "check /raspistill/latest"
       child.stdin.end()
+    , 2000 
 
   robot.router.get "/raspistill/latest", (req, res) ->
-    pathToStills = __dirname.replace('scripts', 'static/images/stills/*.gif')
+    pathToStills = __dirname.replace('scripts', 'static/images/stills/*.jpg')
     glob pathToStills, (er, files) ->
       res.end "#{JSON.stringify(files)}"
