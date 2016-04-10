@@ -2,6 +2,7 @@
   "name": "rxremedi",
   "version": "1.0.0",
   "description": "Twitter Hubot on OpenShift and Firebase",
+  "license": "UNLICENSED",
   "keywords": [
     "Hubot",
     "OpenShift",
