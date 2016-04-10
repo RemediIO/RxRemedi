@@ -1,0 +1,276 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+
+ // accent: #4A148C
+ // primary: #B71C1C
+
+ */
+
+
+.remedi-drawer-separator {
+  height: 1px;
+  background-color: #dcdcdc;
+  margin: 8px 0;
+}
+
+body {
+  margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+.remedi-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.remedi-mobile-title {
+  display: none !important;
+}
+
+.remedi-logo-image {
+  height: 32px;
+  width: 32px;
+}
+
+.remedi-header {
+  overflow: visible;
+}
+  .remedi-header .mdl-navigation__link {
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .remedi-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .remedi-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+
+  .remedi-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+
+
+  .remedi-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .remedi-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+.remedi-drawer {
+  border-right: none;
+}
+
+
+  .remedi-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+
+  }
+
+  .remedi-drawer .mdl-layout-title {
+    position: relative;
+    height: 160px;
+  }
+
+    .remedi-drawer .remedi-logo-image {
+      padding-top: 32px;
+      height: 75%;
+      width: 75%;
+
+    }
+
+.remedi-splash-section {
+  position: relative;
+  height: 600px;
+  width: auto;
+  background-size: cover;
+}
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.remedi-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.remedi-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.remedi-image-link {
+  text-decoration: none;
+}
+
+.remedi-link {
+  text-decoration: none;
+}
+
+  .remedi-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.remedi-alt-link {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+  .remedi-alt-link:hover {
+  }
+
+  .remedi-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.remedi-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+  .remedi-footer a:hover {
+
+  }
+
+  .remedi-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .remedi-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .remedi-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .remedi-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .remedi-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.remedi-link-menu:hover {
+  cursor: pointer;
+}
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+
+  .remedi-view-source{
+    display: none !important;
+  }
+
+  .remedi-navigation-container {
+    display: none;
+  }
+
+  .remedi-title {
+    display: none !important;
+  }
+
+  .remedi-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 16px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .remedi.remedi-search-box.is-focused ~ .remedi-mobile-title,
+  .remedi-search-box.is-focused + .remedi-navigation-container + .remedi-mobile-title {
+    opacity: 0;
+  }
+
+  .remedi-more-button {
+    display: none;
+  }
+
+  .remedi-splash-section {
+    margin-top: 64px;
+    height: 350px;
+  }
+
+  .remedi-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .remedi-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .remedi-fab {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+  .remedi-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
