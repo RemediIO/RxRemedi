@@ -7,7 +7,7 @@ module.exports = (robot) ->
   robot.router.get "/raspistill", (req, res) ->
 
     timestamp = moment().unix()
-    child = spawn('/bin/sh', ['-c', "raspistill --nopreview --output #{__dirname.replace('scripts', 'static/images/stills'}/#{timestamp}.jpg"])
+    child = spawn('/bin/sh', ['-c', "raspistill --nopreview --output #{__dirname.replace('scripts', 'static/images/stills')}/#{timestamp}.jpg"])
 
     child.stdout.on 'data', (data) ->
 
