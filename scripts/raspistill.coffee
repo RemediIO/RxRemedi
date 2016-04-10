@@ -1,4 +1,5 @@
 moment = require('moment')
+glob = require("glob")
 spawn = require('child_process').spawn
 
 module.exports = (robot) ->
@@ -14,3 +15,8 @@ module.exports = (robot) ->
       res.end "#{JSON.stringify(data)}"
 
       child.stdin.end()
+
+  robot.router.get "/raspistill/latest", (req, res) ->
+    pathToStills = __dirname.replace('scripts', 'static/images/stills/*.gif')
+    glob pathToStills, (er, files) ->
+      res.end "#{JSON.stringify(files)}"
