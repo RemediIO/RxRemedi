@@ -25,7 +25,7 @@ module.exports = (robot) ->
 
       res.end JSON.stringify(responseBody)
       child.stdin.end()
-    , 10 *1000
+    , 10 * 1000
 
   robot.router.get "/api/v0/firebase/last-camera-still", (req, res) ->
     lastCaptureRef = firebaseRef.child("last-camera-still")
