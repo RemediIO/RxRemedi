@@ -12,11 +12,8 @@ module.exports = (robot) ->
 
     templateVars = {
       remediLogoImage: '/favicon.png',
-      # dataUri:  (new datauri(__dirname.replace('scripts', 'static/images/spiral.gif'))).content,
-      dataUri:  '/raspistill/latest',
     }
 
-    platesMap.where('id').is('dataUri').use('dataUri').as('src');
     platesMap.where('class').is('remedi-logo-image').use('remediLogoImage').as('src');
 
 
