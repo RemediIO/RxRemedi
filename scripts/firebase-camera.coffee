@@ -10,9 +10,8 @@ module.exports = (robot) ->
 
   robot.router.get "/api/v0/firebase/camera-still", (req, res) ->
     timestamp = moment().unix()
-    child = spawn('/bin/sh', ['-c', "raspistill --width 640 --height 480 --quality 100 --nopreview --output #{lastCapture}"])
-
     lastCapture = __dirname.replace('scripts', 'static/images/firebase/last-camera-still.jpg')
+    child = spawn('/bin/sh', ['-c', "raspistill --width 640 --height 480 --quality 100 --nopreview --output #{lastCapture}"])
 
     setTimeout ->
 
