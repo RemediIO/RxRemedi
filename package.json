@@ -21,6 +21,7 @@
   "dependencies": {
     "chrono-node": "^1.2.1",
     "datauri": "^1.0.4",
+    "firebase": "^2.4.2",
     "glob": "^7.0.3",
     "hubot": ">= 2.6.0 < 3.0.0",
     "hubot-firebase-brain": "^1.0.1",
