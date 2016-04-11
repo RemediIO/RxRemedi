@@ -142,10 +142,27 @@
 
     });
 
-      // $('.remedi-capture-still-btn').click(function(){
-      //   toastr.success('clicked capture button.')
-      //   $.get( "/api/v0/firebase/camera-still",   toastr.success('Still captured.'))
-      // });
+      $('.remedi-capture-still-btn').click(function(){
+
+        $('#last-camera-still-image-data-uri-loading').show();
+
+        $('#last-camera-still-image-data-uri').hide();
+        $('#last-camera-still-image-timestamp').hide();
+        $('.remedi-capture-still-btn').hide();
+
+        $.get( "http://pi.remedi.io/api/v0/firebase/camera-still", function(jsonDatat){
+          console.log(jsonDatat);
+
+          $('#last-camera-still-image-data-uri-loading').hide();
+
+          $('#last-camera-still-image-data-uri').show();
+          $('#last-camera-still-image-timestamp').show();
+
+          $('.remedi-capture-still-btn').show();
+
+          toastr.success('Still captured.')
+        })
+      });
 
     </script>
   </body>
