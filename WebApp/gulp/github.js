@@ -19,6 +19,7 @@ function ghDeploy () {
 
     .pipe( debug() )
     .pipe( gghp({
+      remoteUrl: 'https://github.com/RemediIO/RxRemedi.git',
       branch:  'gh-pages',
       message: "v" + pack.version
     })  );
