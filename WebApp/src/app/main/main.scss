@@ -1,0 +1,54 @@
+
+section.jumbotron {
+  margin-bottom: 30px;
+  padding: 1px 30px;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: left;
+  height: 640px;
+  
+  img {
+    display: block;
+    height: 25%;
+  }
+  h1 {
+    text-align: left;
+    font-size: 4em;
+    margin-bottom: 362px;
+  }
+
+  h2{
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+}
+.remedi-uses {
+  margin-top: 30px;
+  padding: 1px 30px;
+  float: right;
+  height: 128px;
+  color: white;
+  text-align: right;
+  h1 {
+    font-size: 3em;
+  }
+}
+
+
+
+.techs {
+  display: flex;
+  flex-flow: row wrap;
+
+  md-card {
+    width: 30%;
+    color: white;
+    img.pull-right {
+      float: right;
+      width: 100px;
+    }
+  }
+}
