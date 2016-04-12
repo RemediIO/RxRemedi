@@ -11,11 +11,13 @@ module.exports = (robot) ->
     platesMap = plates.Map();
 
     templateVars = {
-      piBaseRef: 'http://pi.remedi.io/'
+      appStyles: 'http://app.remedi.io/styles/'
+      appScripts: 'http://app.remedi.io/scripts/'
       remediLogoImage: '/favicon.png',
     }
 
-    platesMap.where('src').has('scripts/').insert('piBaseRef');
+    platesMap.where('href').has('styles/').insert('appStyles');
+    platesMap.where('src').has('scripts/').insert('appScripts');
 
 
     fs.readFile pathToTemplate, 'utf8', (err, templateHtml) ->
