@@ -1,1 +1,0 @@
-clear && gulp clean && gulp serve
