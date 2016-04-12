@@ -1,7 +1,7 @@
 {
   "name": "rx-remedi-hubot",
   "version": "1.0.0",
-  "description": "Twitter Hubot on OpenShift and Firebase",
+  "description": "Twitter Firebase Hubot on OpenShift Raspberry Pi and Github Pages.",
   "license": "UNLICENSED",
   "keywords": [
     "Hubot",
